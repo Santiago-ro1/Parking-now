@@ -21,8 +21,16 @@ class Bahia extends Model
     {
         return $this->belongsTo(Tipo_Bahia::class, 'id_tipo_bahia', 'id_tipo_bahia');
     }
-    public function id_parqueadero()
+    public function Parqueadero()
     {
         return $this->belongsTo(Parqueadero::class, 'id_parqueadero', 'id_parqueadero');
     }
+    public function Reserva()
+    {
+        return $this->hasMany(Reserva::class);
+    }
+    public function Historial_bahia()
+    {
+        return $this->hasMany(Historial_bahia::class);
+    } 
 }

@@ -39,4 +39,9 @@ class Reserva extends Model
         return $this->belongsTo(IngresoSalida::class, 'id_ingreso_salida', 'id_ingreso_salida');
     }
 
+    public function Pago()
+    {
+        return $this->hasMany(Pago::class);
+    }
+
 }

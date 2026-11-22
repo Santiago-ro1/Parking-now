@@ -14,4 +14,9 @@ class IngresoSalida extends Model
         'fecha_hora_entrada_real',
         'fecha_hora_salida_real'
     ];
+
+    public function Reserva()
+    {
+        return $this->hasMany(Reserva::class);
+    }
 }

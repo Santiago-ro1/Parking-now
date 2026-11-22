@@ -24,4 +24,7 @@ class Parqueadero extends Model
     {
         return $this->belongsTo(Direccion::class, 'id_direccion', 'id_direccion');
     }
+    public function Bahia(){
+        return $this->hasMany(Bahia::class);
+    }
 }

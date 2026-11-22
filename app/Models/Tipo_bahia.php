@@ -13,4 +13,8 @@ class Tipo_bahia extends Model
     protected $fillable = [
         'vehiculo'
     ];
+    public function Bahia()
+    {
+        return $this->hasMany(Bahia::class);
+    }
 }
