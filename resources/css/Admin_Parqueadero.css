@@ -1,0 +1,1060 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4faff;
+    color: #0d2947;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 250px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e4edf2;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.logo {
+    padding: 25px 25px 20px;
+    border-bottom: 1px solid #eef3f6;
+}
+
+.logo img {
+    display: block;
+    width: 175px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 25px 15px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    color: #526579;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.menu a i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.menu a .flecha {
+    width: auto;
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.menu a:hover {
+    background: #eafaff;
+    color: #008db5;
+}
+
+.menu a.menu-activo {
+    background: #27b6d8;
+    color: #ffffff;
+}
+
+.cerrar-sesion {
+    margin-top: auto;
+    padding: 15px;
+    border-top: 1px solid #eef3f6;
+}
+
+.cerrar-sesion a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    color: #526579;
+    font-size: 14px;
+}
+
+.cerrar-sesion a:hover {
+    background: #fff1f1;
+    color: #d9534f;
+}
+
+.contenido-dashboard {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+.encabezado-dashboard {
+    height: 85px;
+    padding: 0 35px;
+    background: #ffffff;
+    border-bottom: 1px solid #e4edf2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.boton-menu {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 10px;
+    background: #eafaff;
+    color: #008db5;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.saludo {
+    flex: 1;
+}
+
+.saludo h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0d2947;
+    margin-bottom: 3px;
+}
+
+.saludo p {
+    font-size: 12px;
+    color: #7a8a99;
+}
+
+.acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.notificaciones {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #f4faff;
+    color: #526579;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.notificaciones:hover {
+    background: #eafaff;
+    color: #008db5;
+}
+
+.punto-notificacion {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #27b6d8;
+    border: 2px solid #ffffff;
+}
+
+.usuario-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.foto-usuario {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e4f7fc;
+    color: #008db5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.informacion-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.informacion-usuario strong {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0d2947;
+}
+
+.informacion-usuario span {
+    font-size: 11px;
+    color: #7a8a99;
+}
+
+.usuario-header > i {
+    margin-left: 5px;
+    color: #7a8a99;
+    font-size: 11px;
+}
+
+
+.main-parqueadero {
+    padding: 30px;
+    color: #0d2947;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-parqueadero button,
+.main-parqueadero input,
+.main-parqueadero select {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-parqueadero button {
+    cursor: pointer;
+}
+
+.titulo-parqueadero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.titulo-parqueadero h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.titulo-parqueadero p {
+    color: #526579;
+    font-size: 14px;
+}
+
+.boton-editar-parqueadero {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #27b6d8;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.boton-editar-parqueadero:hover {
+    background: #008db5;
+}
+
+.resumen-parqueadero {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.tarjeta-parqueadero {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #e7f0f4;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(13, 41, 71, 0.04);
+}
+
+.icono-tarjeta-parqueadero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 16px;
+    background: #eafaff;
+    color: #008db5;
+    font-size: 23px;
+}
+
+.disponible-icono {
+    background: #e3f8ee;
+    color: #249c68;
+}
+
+.ocupado-icono {
+    background: #fff0ee;
+    color: #d64545;
+}
+
+.reservado-icono {
+    background: #fff3d9;
+    color: #c48600;
+}
+
+.informacion-tarjeta-parqueadero p {
+    color: #526579;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.informacion-tarjeta-parqueadero h3 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.informacion-tarjeta-parqueadero span {
+    font-size: 11px;
+    color: #7a8a99;
+}
+
+.panel-informacion-parqueadero,
+.panel-bahias,
+.panel-tarifas,
+.panel-ubicacion {
+    background: white;
+    border: 1px solid #e7f0f4;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(13, 41, 71, 0.04);
+}
+
+.panel-informacion-parqueadero {
+    margin-bottom: 25px;
+}
+
+.encabezado-panel-parqueadero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.encabezado-panel-parqueadero h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.encabezado-panel-parqueadero p {
+    color: #526579;
+    font-size: 13px;
+}
+
+.estado-parqueadero {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: #e3f8ee;
+    color: #249c68;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.estado-parqueadero i {
+    font-size: 8px;
+}
+
+.informacion-general-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.dato-parqueadero {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.etiqueta-parqueadero {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #7a8a99;
+}
+
+.etiqueta-parqueadero i {
+    color: #27b6d8;
+    font-size: 14px;
+}
+
+.dato-parqueadero strong {
+    font-size: 14px;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.panel-bahias {
+    margin-bottom: 25px;
+}
+
+.boton-agregar-bahia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #27b6d8;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.boton-agregar-bahia:hover {
+    background: #008db5;
+}
+
+.estadisticas-bahias {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.estadistica-bahia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    background: #f4faff;
+}
+
+.indicador-bahia {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+}
+
+.indicador-bahia.disponible {
+    background: #249c68;
+}
+
+.indicador-bahia.ocupado {
+    background: #ff7b7b;
+}
+
+.indicador-bahia.reservado {
+    background: #f2bd50;
+}
+
+.indicador-bahia.mantenimiento {
+    background: #7a8a99;
+}
+
+.estadistica-bahia span:nth-child(2) {
+    font-size: 12px;
+    color: #526579;
+}
+
+.estadistica-bahia strong {
+    margin-left: auto;
+    font-size: 15px;
+}
+
+.filtros-bahias {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.busqueda-bahia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    padding: 0 15px;
+    border: 1px solid #c8e5ee;
+    border-radius: 12px;
+    background: white;
+}
+
+.busqueda-bahia i {
+    color: #27b6d8;
+}
+
+.busqueda-bahia input {
+    width: 100%;
+    padding: 13px 0;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: transparent;
+}
+
+.filtros-bahias select {
+    padding: 12px 15px;
+    border: 1px solid #c8e5ee;
+    border-radius: 12px;
+    background: white;
+    color: #0d2947;
+    font-size: 12px;
+    outline: none;
+}
+
+.filtros-bahias select:focus,
+.busqueda-bahia:focus-within {
+    border-color: #27b6d8;
+}
+
+.contenedor-bahias {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bahia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.bahia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 41, 71, 0.07);
+}
+
+.bahia-disponible {
+    border-color: #c4ead8;
+    background: #f3fcf7;
+}
+
+.bahia-ocupada {
+    border-color: #ffd0d0;
+    background: #fff7f6;
+}
+
+.bahia-reservada {
+    border-color: #f4dfaa;
+    background: #fffaf0;
+}
+
+.numero-bahia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.numero-bahia span {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.numero-bahia i {
+    font-size: 23px;
+}
+
+.bahia-disponible .numero-bahia i {
+    color: #249c68;
+}
+
+.bahia-ocupada .numero-bahia i {
+    color: #d64545;
+}
+
+.bahia-reservada .numero-bahia i {
+    color: #c48600;
+}
+
+.texto-estado-bahia {
+    padding: 6px 10px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.bahia-disponible .texto-estado-bahia {
+    background: #e3f8ee;
+    color: #249c68;
+}
+
+.bahia-ocupada .texto-estado-bahia {
+    background: #ffe5e2;
+    color: #d64545;
+}
+
+.bahia-reservada .texto-estado-bahia {
+    background: #fff3d9;
+    color: #c48600;
+}
+
+.bahia small {
+    color: #526579;
+    font-size: 11px;
+}
+
+.boton-detalle-bahia {
+    width: 100%;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #c8e5ee;
+    border-radius: 10px;
+    background: white;
+    color: #008db5;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.boton-detalle-bahia:hover {
+    background: #eafaff;
+    border-color: #27b6d8;
+}
+
+.pie-bahias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e7f0f4;
+}
+
+.pie-bahias p {
+    color: #7a8a99;
+    font-size: 12px;
+}
+
+.pie-bahias button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: transparent;
+    color: #008db5;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pie-bahias button:hover {
+    color: #27b6d8;
+}
+
+.seccion-tarifas-ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.panel-tarifas,
+.panel-ubicacion {
+    min-width: 0;
+}
+
+.boton-editar-tarifas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #c8e5ee;
+    border-radius: 10px;
+    background: white;
+    color: #008db5;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.boton-editar-tarifas:hover {
+    background: #eafaff;
+}
+
+.tarifa-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e7f0f4;
+}
+
+.tarifa-item:last-of-type {
+    border-bottom: none;
+}
+
+.icono-tarifa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 14px;
+    background: #eafaff;
+    color: #008db5;
+    font-size: 20px;
+}
+
+.informacion-tarifa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.informacion-tarifa strong {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.informacion-tarifa span {
+    font-size: 11px;
+    color: #7a8a99;
+}
+
+.valor-tarifa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    text-align: right;
+}
+
+.valor-tarifa strong {
+    font-size: 18px;
+    color: #008db5;
+}
+
+.valor-tarifa span {
+    font-size: 10px;
+    color: #7a8a99;
+}
+
+.nota-tarifas {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 12px;
+    background: #eafaff;
+    color: #526579;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.nota-tarifas i {
+    color: #008db5;
+    margin-top: 3px;
+}
+
+.informacion-ubicacion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icono-ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 15px;
+    background: #eafaff;
+    color: #008db5;
+    font-size: 22px;
+}
+
+.informacion-ubicacion strong {
+    font-size: 14px;
+}
+
+.informacion-ubicacion p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #526579;
+}
+
+.informacion-ubicacion span {
+    font-size: 11px;
+    color: #7a8a99;
+}
+
+.mapa-ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    border-radius: 18px;
+    background:
+        linear-gradient(rgba(39, 182, 216, 0.07), rgba(39, 182, 216, 0.07)),
+        repeating-linear-gradient(
+            0deg,
+            #e7f0f4,
+            #e7f0f4 1px,
+            transparent 1px,
+            transparent 35px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #e7f0f4,
+            #e7f0f4 1px,
+            transparent 1px,
+            transparent 35px
+        );
+    border: 1px solid #e7f0f4;
+}
+
+.contenido-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #008db5;
+    text-align: center;
+}
+
+.contenido-mapa i {
+    font-size: 40px;
+}
+
+.contenido-mapa span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.boton-ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #27b6d8;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.boton-ubicacion:hover {
+    background: #008db5;
+}
+
+
+@media (max-width: 1300px) {
+    .main-parqueadero {
+        padding: 25px;
+    }
+
+    .resumen-parqueadero {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contenedor-bahias {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .estadisticas-bahias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .informacion-general-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .seccion-tarifas-ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-bahias {
+        flex-wrap: wrap;
+    }
+
+    .busqueda-bahia {
+        min-width: 100%;
+    }
+
+    .filtros-bahias select {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-parqueadero {
+        padding: 15px;
+    }
+
+    .titulo-parqueadero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo-parqueadero h2 {
+        font-size: 22px;
+    }
+
+    .boton-editar-parqueadero {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .resumen-parqueadero {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tarjeta-parqueadero {
+        padding: 18px;
+    }
+
+    .panel-informacion-parqueadero,
+    .panel-bahias,
+    .panel-tarifas,
+    .panel-ubicacion {
+        padding: 18px;
+    }
+
+    .encabezado-panel-parqueadero {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .estado-parqueadero {
+        align-self: flex-start;
+    }
+
+    .informacion-general-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .estadisticas-bahias {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .estadistica-bahia {
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+
+    .filtros-bahias {
+        flex-direction: column;
+    }
+
+    .busqueda-bahia {
+        min-width: 0;
+    }
+
+    .filtros-bahias select {
+        width: 100%;
+    }
+
+    .contenedor-bahias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .bahia {
+        padding: 14px;
+    }
+
+    .numero-bahia span {
+        font-size: 14px;
+    }
+
+    .numero-bahia i {
+        font-size: 19px;
+    }
+
+    .pie-bahias {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .boton-agregar-bahia {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .panel-tarifas .encabezado-panel-parqueadero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .panel-ubicacion .encabezado-panel-parqueadero {
+        flex-direction: row;
+    }
+
+    .tarifa-item {
+        gap: 10px;
+    }
+
+    .valor-tarifa strong {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .contenedor-bahias {
+        grid-template-columns: 1fr;
+    }
+
+    .estadisticas-bahias {
+        grid-template-columns: 1fr;
+    }
+}

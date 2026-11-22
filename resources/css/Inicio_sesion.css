@@ -1,0 +1,421 @@
+/* Reseteo y tipografía base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+}
+
+/* Contenedor principal dividido en dos mitades */
+.login-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- PANEL IZQUIERDO (Visual / Marca) --- */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #0d2b45 0%, #155e75 50%, #22b8cf 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de brillo sutil de fondo */
+.left-panel::before {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(34, 184, 207, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 20%;
+}
+
+.hero-logo-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo-card img {
+    width: 600px;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+}
+
+.visual-showcase h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.visual-showcase p {
+    font-size: 1.05rem;
+    color: #e0f2fe;
+    line-height: 1.5;
+}
+
+/* --- PANEL DERECHO (Formulario) --- */
+.right-panel {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header img {
+    width: 58px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.form-header h1 {
+    font-size: 1.85rem;
+    color: #1e293b;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Grupos de inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field i.left-icon {
+    position: absolute;
+    left: 14px;
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px 40px 12px 42px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field input:focus {
+    border-color: #1aa3c8;
+    box-shadow: 0 0 0 3px rgba(26, 163, 200, 0.15);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    color: #94a3b8;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Opciones: Recordarme y Olvidaste contraseña */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    accent-color: #1aa3c8;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #1a88c8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botón principal */
+.btn-submit {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #3bc9db 0%, #1971c2 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    opacity: 0.93;
+}
+
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+/* Separador */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divider span {
+    padding: 0 12px;
+}
+
+/* Botones sociales */
+.social-login {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.btn-social {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-social:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-social .fa-google {
+    color: #ea4335;
+}
+
+/* Pie de registro */
+.register-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.register-footer a {
+    color: #1a88c8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #071c2d;
+
+    color: white;
+
+    padding: 60px 7% 20px;
+}
+
+.contenido-footer {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-logo img {
+    width: 190px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    color: #9db1c1;
+
+    font-size: 13px;
+}
+
+.footer-columna {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-columna h3 {
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.footer-columna a {
+    color: #9db1c1;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-columna a:hover {
+    color: #27b6d8;
+}
+
+
+
+/* REDES */
+
+.redes {
+    display: flex;
+
+    gap: 10px;
+}
+
+.redes a {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background: #27b6d8;
+
+    color: white;
+}
+
+
+
+/* COPYRIGHT */
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    text-align: center;
+}
+
+.copyright p {
+    color: #738a9c;
+
+    font-size: 11px;
+}
+
+/* --- RESPONSIVE (Móviles y Tablets) --- */
+@media (max-width: 850px) {
+    .left-panel {
+        display: none;
+    }
+}
