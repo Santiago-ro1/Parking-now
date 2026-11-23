@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     <title>Inicio Parking-now</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="/Index.html" class="logo-link"><img src="/images/Logo_parkingnow.png" alt="" class="Parking-now"></a>
+        <a href="{{ route('Index') }}" class="logo-link"><img src="{{ asset('images/Logo_parkingnow.png') }}" alt="" class="Parking-now"></a>
         <div class="right">
             <div class="notificacion">
                 <i class="fa-solid fa-bell"></i>
@@ -42,10 +42,10 @@
                 <div class="panel-sesion oculto">
                     <ul>
                         <li class="perfil-button">
-                            <a href="/Perfil-usuario.html" class="perfil-texto"><p>Mi cuenta <i class="fa-solid fa-circle-user"></i></p></a>
+                            <a href="{{ route('Perfil_usuario') }}" class="perfil-texto"><p>Mi cuenta <i class="fa-solid fa-circle-user"></i></p></a>
                         </li>
                         <li class="perfil-button">
-                            <a href="/Login-usuario.html" class="perfil-texto"><p>Cerrar Sesion <i class="fa-solid fa-arrow-right-from-bracket"></i></p></a>
+                            <a href="{{ route('Cerrar_sesion') }}" class="perfil-texto"><p>Cerrar Sesion <i class="fa-solid fa-arrow-right-from-bracket"></i></p></a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
                 <li><button class="nav" onclick="window.location.href='/Perfil-usuario.html'">Mi perfil</button></li>
             </ul>
             <div class="sidebar-footer">
-                <img src="/images/Sidebarsinfondo.png" alt="" class="ciudad">
+                <img src="{{ asset('images/Sidebarsinfondo.png') }}" alt="" class="ciudad">
                 <p class="text-footer">Tu parqueadero ideal,</p>
                 <p style="color: #00CFE8;" class="text-footer">siempre cerca</p>
             </div>
@@ -126,7 +126,7 @@
                 <div class="location">
                     <div class="Disponibilidad">
                         <h3><i class="fa-solid fa-location-pin"></i> Disponibilidad en Tiempo Real</h3>
-                        <a href="/Reserva.html" class="mapa-completo">Ver mapa completo <i class="fa-solid fa-circle-arrow-right"></i></a>
+                        <a href="{{ route('Reserva') }}" class="mapa-completo">Ver mapa completo <i class="fa-solid fa-circle-arrow-right"></i></a>
                     </div>
                     <div class="parking">
                         <div class="map">
@@ -306,14 +306,14 @@
             </div>
         </div>
     </div>
-    <script src="/Javascript/Dashboard_usuario.js"></script>
+
         <footer id="contacto">
 
         <div class="contenido-footer">
 
             <div class="footer-logo">
 
-                <img src="images/Logo_parkingnow.png" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
 
                 <p>
                     Estaciona sin complicaciones.

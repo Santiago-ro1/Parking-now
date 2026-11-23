@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     @vite(['resources/css/index.css'])
 </head>
 
@@ -24,7 +24,7 @@
         <header class="navbar">
 
             <div class="logo">
-                <img src="{{('Logo_parkingnow.png')}}" alt="Logo Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Logo Parking-now">
             </div>
 
             <nav class="menu">
@@ -51,7 +51,7 @@
         <div class="contenido-hero">
 
             <div class="titulo-hero">
-                <img src="{{('images/Logo_parkingnow.png"')}}' alt="" width="70%">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="" width="70%">
 
                 <h1>
                     Tu parqueadero ideal,
@@ -466,7 +466,7 @@
 
             <div class="footer-logo">
 
-                <img src="{{('images/Logo_parkingnow.png')}}" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
 
                 <p>
                     Estaciona sin complicaciones.

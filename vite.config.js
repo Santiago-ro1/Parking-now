@@ -12,7 +12,7 @@ export default defineConfig({
                  'resources/css/Admin_Ingreso_salida.css',
                  'resources/css/Admin_Parqueadero.css',
                  'resources/css/Admin_reservas.css',
-                 'resources/css/Admin_usuario.css',
+                 'resources/css/Admin_usuarios.css',
                  'resources/css/Administrador.css',
                  'resources/css/cambiar_cantraseña',
                  'resources/css/Convenios.css',

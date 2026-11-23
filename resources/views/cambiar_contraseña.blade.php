@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     @vite(['resources/css/cambiar_contraseña.css','resources/js/validacion-cambiar-contraseña.js'])
 </head>
 <body>
@@ -20,7 +20,7 @@
         <!-- Logo -->
         <header class="encabezado">
             <a href="../index.html">
-            <img src="{{('images/Logofsinfondo.png')}}" alt="Logo de Parking_now">
+            <img src="{{ asset('images/Logofsinfondo.png') }}" alt="Logo de Parking_now">
             </a>
         </header>
 
@@ -30,7 +30,7 @@
             <div class="informacion">
 
                 <div class="imagen-contenedor">
-                    <img src="{{('images/telefonoparking.jpg')}}" alt="Imagen">
+                    <img src="{{ asset('images/telefonoparking.jpg') }}" alt="Imagen">
                 </div>
 
                 <h2>
@@ -126,7 +126,7 @@
 
             <div class="footer-logo">
 
-                <img src="{{('images/Logo_parkingnow.png')}}" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
 
                 <p>
                     Estaciona sin complicaciones.
