@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
+    <title>Inicio Parking-now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    @vite(['resources/css/Dashboard_usuario.css','resources/js/Dashboard_usuario.js'])
+</head>
+<body>
+    <header>
+        <a href="{{ route('Index') }}" class="logo-link"><img src="{{ asset('images/Logo_parkingnow.png') }}" alt="" class="Parking-now"></a>
+        <div class="right">
+            <div class="notificacion">
+                <i class="fa-solid fa-bell"></i>
+                <span class="insignia">2</span>
+                <div class="panel-notificaciones oculto">
+                    <h4>Notificaciones</h4>
+                    <ul>
+                        <li class="notif-item">
+                            <p class="notif-titulo">Reserva Confirmada</p>
+                            <p class="notif-texto">Tu reserva en parqueadero en calle 68</p>
+                        </li>
+                        <li class="notif-item">
+                            <p class="notif-titulo">Recordatorio</p>
+                            <p class="notif-texto">Tu reserva termina en 30 minutos</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="perfil">
+                <div class="avatar-initials">CM</div>
+                <div class="texto-perfil">
+                    <span class="nombre">Cristian Moreno</span>
+                    <span class="rol">Cliente </span>                    
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="panel-sesion oculto">
+                    <ul>
+                        <li class="perfil-button">
+                            <a href="{{ route('Perfil_usuario') }}" class="perfil-texto"><p>Mi cuenta <i class="fa-solid fa-circle-user"></i></p></a>
+                        </li>
+                        <li class="perfil-button">
+                            <a href="{{ route('Cerrar_sesion') }}" class="perfil-texto"><p>Cerrar Sesion <i class="fa-solid fa-arrow-right-from-bracket"></i></p></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mid">
+        <aside class="sidebar">
+            <ul>
+                <li><button class="nav activo">Inicio</button></li>
+                <li><button class="nav">Mis reservas</button></li>
+                <li><button class="nav">Convenio</button></li>
+                <li><button class="nav" onclick="window.location.href='/Perfil-usuario.html'">Mi perfil</button></li>
+            </ul>
+            <div class="sidebar-footer">
+                <img src="{{ asset('images/Sidebarsinfondo.png') }}" alt="" class="ciudad">
+                <p class="text-footer">Tu parqueadero ideal,</p>
+                <p style="color: #00CFE8;" class="text-footer">siempre cerca</p>
+            </div>
+        </aside>
+        <main class="inicio">
+            <div class="principal">
+                <div class="saludo">
+                    <h1>Hola Cristian &#128075;</h1>
+                    <h2>¿Dónde quieres parquear hoy?</h2>
+                </div>
+                <div class="search"> 
+                    <form>
+                        <h3><i class="fa-solid fa-magnifying-glass"></i> Buscar Parqueadero</h3>
+                        <div class="filtros">
+                            <div class="arriba">
+                                <div class="input-group">
+                                <i class="fa-solid fa-location-dot icon-left"></i>
+                                <label for="zona">Ubicación</label>
+                                <select name="" id="zona" required>
+                                    <option value="" disabled selected>Selecciona una Zona</option>
+                                    <option value="Chapinero">Chapinero</option>
+                                    <option value="Suba">Suba</option>
+                                </select>
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-square-parking"></i>
+                                    <label for="parqueadero">Parqueadero</label>
+                                    <select name="" id="parqueadero" required>
+                                        <option value="" disabled selected>Selecciona un Parqueadero</option>
+                                        <option value="">Parqueadero Don Rafa</option>
+                                        <option value="">Parqueadero Don Rafa 2</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <i class="fa-solid fa-car"></i>
+                                    <label for="Vehiculo">Vehiculo</label>
+                                    <select name="" id="Vehiculo" required>
+                                        <option value="" disabled selected> Selecciona un Vehículo</option>
+                                        <option value="agregar">+ Agregar Vehiculo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="abajo">
+                                <div class="input-group">
+                                    <label for="hora-entrada">Hora</label>
+                                    <input type="time" id="hora-entrada" name="hora-entrada" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="fecha">Fecha</label>
+                                    <select name="Fecha" id="Fecha" required>
+                                        <option value="" disabled selected>Selecciona una fecha</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-buscar">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Buscar Disponibilidad
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="location">
+                    <div class="Disponibilidad">
+                        <h3><i class="fa-solid fa-location-pin"></i> Disponibilidad en Tiempo Real</h3>
+                        <a href="{{ route('Reserva') }}" class="mapa-completo">Ver mapa completo <i class="fa-solid fa-circle-arrow-right"></i></a>
+                    </div>
+                    <div class="parking">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645.3724594231649!2d-74.06339388856814!3d4.652049657432905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a45d66a83a7%3A0x1f94d872e1550245!2sAgencia%20P%C3%BAblica%20de%20Empleo%20SENA%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1790037814592!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" ></iframe>
+                        </div>
+                        <div class="parking-lot">
+                            <ul>
+                                <li class="lot">
+                                    <h5>Parqueadero calle 68</h5> 
+                                    <p>5 cupos disponibles</p> 
+                                    <p>1.2 Km</p>
+                                </li>
+                                <li class="lot">
+                                    <h5>Parqueadero Chapinero</h5> 
+                                    <p>5 cupos disponibles</p> 
+                                    <p>1.2 Km</p>
+                                </li>
+                                <li class="lot">
+                                    <h5>Parqueadero Rafa</h5> 
+                                    <p>5 cupos disponibles</p>
+                                    <p>1.2 Km</p>
+                                    <!-- Info extra -->
+                                    <div class="lot-info-extra">
+                                        <p><i class="fa-solid fa-dollar-sign"></i> Tarifa: $4.000 hora</p>
+                                        <p><i class="fa-solid fa-clock"></i> Horario 6:00 a.m - 10:00 p.m</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="side-derecho">
+                <div class="reserva-activa">
+    <h3><i class="fa-solid fa-file-invoice"></i> Reserva activa</h3>
+                    <div class="estado-reserva">
+                        <i class="fa-solid fa-car"></i>
+                        <span class="badge-confirmada">Confirmada</span>
+                    </div>
+                
+                    <div class="dato-reserva">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <p class="dato-label">Parqueadero</p>
+                            <p class="dato-valor">Parqueadero Calle 68</p>
+                        </div>
+                    </div>
+                
+                    <div class="dato-reserva">
+                        <i class="fa-solid fa-id-card"></i>
+                        <div>
+                            <p class="dato-label">Placa</p>
+                            <p class="dato-valor">ABC123</p>
+                        </div>
+                    </div>
+                
+                    <div class="dato-reserva">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <p class="dato-label">Entrada</p>
+                            <p class="dato-valor">3:00 p.m.</p>
+                        </div>
+                    </div>
+                
+                    <div class="dato-reserva">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <p class="dato-label">Salida</p>
+                            <p class="dato-valor">5:00 p.m.</p>
+                        </div>
+                    </div>
+                
+                    <div class="botones-reserva">
+                        <button class="btn-detalles">Ver detalles</button>
+                        <button class="btn-cancelar">Cancelar reserva</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+        <div class="modal-overlay oculto" id="modalVehiculo">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Agregar Vehículo</h3>
+                <button type="button" class="modal-cerrar" id="cerrarModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        
+            <form id="formVehiculo">
+                <div class="modal-tipo-vehiculo">
+                    <p>Tipo de Vehículo</p>
+                    <input type="radio" id="carro" name="tipo-vehiculo" value="Carro" checked>
+                    <label for="carro"><i class="fa-solid fa-car"></i> Carro</label>
+                    <input type="radio" id="moto" name="tipo-vehiculo" value="Moto">
+                    <label for="moto"><i class="fa-solid fa-motorcycle"></i> Moto</label>
+                </div>
+            
+                <div class="input-group">
+                    <label for="marca">Marca</label>
+                    <select name="marca" id="marca" required>
+                        <option value="" disabled selected> Selecciona una marca</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="modelo">Linea</label>
+                    <input type="text" id="modelo" name="modelo" required placeholder="ej. Beat">
+                </div>
+            
+                <div class="input-group">
+                    <label for="anio">Año</label>
+                    <input type="number" id="anio" name="anio" min="1980" max="2026" required placeholder="ej. 2020">
+                </div>
+            
+                <div class="input-group">
+                    <label for="placa">Placa</label>
+                    <input type="text" id="placa" name="placa" required placeholder="ej. GMU187" pattern="[A-Z]{3}[0-9]{3}" maxlength="6" title="Tres letras y tres numeros en mayúsculas">
+                </div>
+            
+                <div class="input-group">
+                    <label for="color">Color</label>
+                    <select name="color" id="color" required>
+                        <option value="" disabled selected>Selecciona un color</option>
+                        <option value="Blanco">Blanco</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Gris">Gris</option>
+                        <option value="Rojo">Rojo</option>
+                        <option value="Azul">Azul</option>
+                        <option value="Plata">Plata</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Amarillo">Amarillo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-buscar">Guardar Vehículo</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal detalles -->
+    <div class="modal-overlay oculto" id="modalDetalles">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3>Detalles de la reservas</h3>
+                <button type="button" class="modal-cerrar" id="cerrarModalDetalles">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="dato-reserva">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <p class="dato-label">Parqueadero</p>
+                    <p class="dato-valor">Parqueadero calle 68</p>
+                </div>
+            </div>
+
+            <div class="dato-reserva">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <p class="dato-label">Hora de entrada</p>
+                    <p class="dato-valor">3:00 p.m</p>
+                </div>
+            </div>
+            <div class="dato-reserva">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <p class="dato-label">Estado</p>
+                    <p class="dato-valor">Confirmada</p>
+                </div>
+            </div>
+            <div class="dato-reserva">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <div>
+                    <p class="dato-label">Tarifa</p>
+                    <p class="dato-valor">$200 por minuto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer id="contacto">
+
+        <div class="contenido-footer">
+
+            <div class="footer-logo">
+
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
+
+                <p>
+                    Estaciona sin complicaciones.
+                </p>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h3>
+                    Parking-now
+                </h3>
+
+                <a href="#">
+                    Inicio
+                </a>
+
+                <a href="#servicios">
+                    Servicios
+                </a>
+
+                <a href="#tarifas">
+                    Tarifas
+                </a>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h3>
+                    Ayuda
+                </h3>
+
+                <a href="#">
+                    Preguntas frecuentes
+                </a>
+
+                <a href="#">
+                    Contacto
+                </a>
+
+                <a href="#">
+                    PQRS
+                </a>
+
+            </div>
+
+
+            <div class="footer-columna">
+
+                <h3>
+                    Síguenos
+                </h3>
+
+                <div class="redes">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Parking-now. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
