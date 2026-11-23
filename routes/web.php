@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservaController;
+use App\Models\Reserva;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,4 +12,6 @@ Route::get('/', function () {
 Route::get('/reservas', [ReservaController::class, 'index']);
 
 //Ruta Para guardar una nueva reserva
-Route::post('/reservas', [ReservaController::class, 'store']);    
+Route::post('/reservas', [ReservaController::class, 'store']);
+
+Route::resource('reserva', ReservaController::class);
