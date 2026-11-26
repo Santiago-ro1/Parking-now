@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas | Parking-now</title>
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,14 +15,14 @@
 <body>
 
     <header class="encabezado">
-        <a href="../index.html">
-        <img src="../images/Logofsinfondo.png" width="25%" alt="">
+        <a href="{{ route('Index') }}">
+        <img src="{{ asset('images/Logofsinfondo.png') }}" width="25%" alt="">
         </a>
         </a>
 
         <nav class="navegacion">
-            <a href="index.html">Inicio</a>
-            <a href="mapa-parqueaderos.html" class="activo">Mapa</a>
+            <a href="{{ route('Index') }}">Inicio</a>
+            <a href="#" class="activo">Mapa</a>
             <a href="#">Mis reservas</a>
             <a href="#">Pagos</a>
         </nav>
@@ -296,7 +296,7 @@
 
             <div class="footer-logo">
 
-                <img src="../images/Logo_parkingnow.png" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
 
                 <p>
                     Estaciona sin complicaciones.

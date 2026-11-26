@@ -28,10 +28,10 @@
             </div>
 
             <nav class="menu">
-                <a href="{{ route('Index') }} #inicio" class="activo">Inicio</a>
-                <a href="{{ route('Index') }} #servicios" >Servicios</a>
-                <a href="{{ route('Index') }} #tarifas">Tarifas</a>
-                <a href="{{ route('Index') }} #contacto">Contacto</a>
+                <a href="#inicio" class="activo">Inicio</a>
+                <a href="#servicios" >Servicios</a>
+                <a href="#tarifas">Tarifas</a>
+                <a href="#contacto">Contacto</a>
             </nav>
 
             <div class="acciones">

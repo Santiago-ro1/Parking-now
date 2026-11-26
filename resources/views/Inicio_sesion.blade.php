@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon y estilos -->
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     @vite(['resources/css/inicio_sesion.css','resources/js/Inicio_sesion.js'])
 </head>
 <body>
@@ -25,7 +25,7 @@
             <section class="left-panel">
                 <div class="visual-showcase">
                     <div class="hero-logo-card">
-                        <img src="../images/imagen_inicio_sesion.png" alt="inicio de sesión de Parking-now">
+                        <img src="{{ asset('images/imagen_inicio_sesion.png') }}" alt="inicio de sesión de Parking-now">
                     </div>
                     <h2>Bienvenido de nuevo</h2>
                     <p>Accede a tus proyectos y ubicaciones de forma segura.</p>
@@ -36,7 +36,7 @@
             <section class="right-panel">
                 <div class="form-wrapper">
                     <div class="form-header">
-                        <img src="../images/LOGO1.1.png" alt="Logo Parking-now">
+                        <img src="{{ asset('images/LOGO1.1.png') }}" alt="Logo Parking-now">
                         <h1>Iniciar Sesión</h1>
                         <p>Ingresa tus credenciales para acceder a tu cuenta</p>
                     </div>
@@ -66,7 +66,7 @@
                                 <input type="checkbox" name="remember" checked>
                                 <span>Recordarme</span>
                             </label>
-                            <a href="../recuperar_contraseña.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                            <a href="{{ route('recuperar_contraseña') }}" class="forgot-link">¿Olvidaste tu contraseña?</a>
                         </div>
 
                         <button type="submit" class="btn-submit">Iniciar sesión</button>
@@ -86,7 +86,7 @@
                     </div>
 
                     <p class="register-footer">
-                        ¿No tienes una cuenta? <a href="../Login-usuario.html">Regístrate</a>
+                        ¿No tienes una cuenta? <a href="{{ route('Login-usuario') }}">Regístrate</a>
                     </p>
                 </div>
             </section>
@@ -96,7 +96,7 @@
     <footer id="contacto">
         <div class="contenido-footer">
             <div class="footer-logo">
-                <img src="../images/Logo_parkingnow.png" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
                 <p>Estaciona sin complicaciones.</p>
             </div>
 

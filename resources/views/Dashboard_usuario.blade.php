@@ -73,8 +73,7 @@
                     <h2>¿Dónde quieres parquear hoy?</h2>
                 </div>
                 <div class="search"> 
-                    <form action="{{route('reservas.store}}" method="POST">
-                        @csrf
+                    <form>
                         <h3><i class="fa-solid fa-magnifying-glass"></i> Buscar Parqueadero</h3>
                         <div class="filtros">
                             <div class="arriba">

@@ -35,7 +35,7 @@ input {
             rgba(5, 28, 50, 0.45),
             rgba(5, 28, 50, 0.68)
         ),
-        url("/images/Ciudad.png");
+        url("../../public/images/Ciudad.png");
 
     background-size: cover;
     background-position: center;

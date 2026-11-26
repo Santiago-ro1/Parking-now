@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{{('images/LOGO1.1.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/LOGO1.1.png') }}" type="image/x-icon">
     @vite(['resources/css/recuperar_contraseña.css'])
 
 </head>
@@ -20,8 +20,8 @@
 
         <!-- Logo -->
         <header class="encabezado">
-            <a href="../Index.html">
-            <img src="../images/Logofsinfondo.png" alt="Logo de Parking_now">
+            <a href="{{ route('Index') }}">
+            <img src="{{ asset('images/Logofsinfondo.png') }}" alt="Logo de Parking_now">
             </a>
         </header>
 
@@ -31,7 +31,7 @@
             <div class="informacion">
 
                 <div class="imagen-contenedor">
-                    <img src="../images/telefonoparking.jpg" alt="Imagen">
+                    <img src="{{ asset('images/telefonoparking.jpg') }}" alt="Imagen">
                 </div>
 
                 <h2>
@@ -67,7 +67,7 @@
             <!-- Formulario -->
              <div class="formulario">
 
-                <a href="../index.html" class="volver">
+                <a href="{{ route('Index') }}" class="volver">
                     <span class="flecha"><i class="fa-solid fa-arrow-left"></i></span>
                     <span class="texto"> Volver al inicio</span> 
                 </a>
@@ -93,7 +93,7 @@
                     </button>
                 </form>
 
-                <a href="../Inicio_sesion.html" class="volver-login">
+                <a href="{{ route('Inicio_sesion') }}" class="volver-login">
                      <i class="fa-solid fa-arrow-left"></i> Volver al inicio de sesión
                 </a>
 
@@ -108,7 +108,7 @@
 
             <div class="footer-logo">
 
-                <img src="../images/Logo_parkingnow.png" alt="Parking-now">
+                <img src="{{ asset('images/Logo_parkingnow.png') }}" alt="Parking-now">
 
                 <p>
                     Estaciona sin complicaciones.
