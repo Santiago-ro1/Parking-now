@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    
     <main class="contenedor">
 
         <header class="encabezado">
@@ -81,8 +82,8 @@
                     Completa tus datos para comenzar a utilizar Parking-now.
                 </p>
 
-                <form id="formularioRegistro">
-                    
+                <form  method="POST" action="{{ route('register.store') }}">
+                    @csrf
                     <div class="fila-campo">
                     <div class="campo">
 
@@ -93,7 +94,7 @@
                         <input
                             type="text"
                             id="nombre"
-                            name="nombre"
+                            name="primer_nombre"
                             placeholder="Ingresa tu nombre"
                             required
                         >
@@ -109,7 +110,7 @@
                         <input
                             type="text"
                             id="nombre2"
-                            name="nombre2"
+                            name="segundo_nombre"
                             placeholder="Segundo nombre"
                             required
                         >
@@ -126,7 +127,7 @@
                         <input
                             type="text"
                             id="apellido"
-                            name="apellido"
+                            name="primer_apellido"
                             placeholder="Ingresa tu apellido"
                             required
                         >
@@ -141,7 +142,7 @@
                         <input
                             type="text"
                             id="apellido2"
-                            name="apellido2"
+                            name="segundo_apellido"
                             placeholder="Segundo apellido"
                             required
                         >
@@ -188,7 +189,7 @@
                         <input
                             type="text"
                             id="numero-documento"
-                            name="numero_documento"
+                            name="no_documento"
                             placeholder="Ej. 12345678"
                             required
                         >
@@ -215,10 +216,10 @@
                         <label for="genero">Género</label>
                         <select name="genero" id="genero">
                             <option value="">Seleccione una opcion</option>
-                            <option value="maculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="otro">Otro</option>
-                            <option value="prefiero no decirlo">Prefiero no decirlo</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
+                            <option value="4">Prefiero no decirlo</option>
                         </select>
                         <input type="text" name="genero_otro" id="genero_otro" placeholder="Ingrese su Género" style="display: none;">
                     </div>
@@ -232,7 +233,7 @@
                         <input
                             type="email"
                             id="correo"
-                            name="correo"
+                            name="correo_electronico"
                             placeholder="ejemplo@correo.com"
                             required
                         >
@@ -250,7 +251,7 @@
                             <input
                                 type="password"
                                 id="contraseña"
-                                name="contraseña"
+                                name="contrasena"
                                 placeholder="Crea una contraseña"
                                 required
                             >
@@ -292,12 +293,13 @@
                     </button>
                     <p class="ya-cuenta">
                         ¿Ya tienes una cuenta?
-                        <a href="../Inicio_sesion.html">
+                        <a href="{{ route('register.show')}}">
                             Iniciar sesión
                         </a>
 
                     </p>
 
+                    
                 </form>
             </div>
 
@@ -393,7 +395,7 @@
         </div>
 
     </footer>
-    <script src="../Javascript/Login-usuario.js"></script>
+    <!-- <script src="../Javascript/Login-usuario.js"></script> -->
 
 </body>
 </html>

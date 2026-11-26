@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservaController;
 
@@ -39,9 +40,12 @@ Route::view('/Admin_Reservas', 'Admin_Reservas')->name('Admin_Reservas');
 Route::view('/Admin_usuarios', 'Admin_usuarios')->name('Admin_usuarios');
 
 //Ruta para ver lal lista de reservas
-Route::get('/reservas', [ReservaController::class, 'index']);
+Route::get('/reserva/crear', [ReservaController::class, 'create'])->name('reservas.create');
+//Guardar la info
+Route::get('/reserva', [ReservaController::class, 'store'])->name('reservas.store');
+//Para ver la informacion
+Route::get('/reserva', [ReservaController::class, 'index'])->name('reservas.index');
 
-//Ruta Para guardar una nueva reserva
-Route::post('/reservas', [ReservaController::class, 'store']);
-
-Route::resource('reserva', ReservaController::class);
+//Rutas para registro
+Route::get('/Login-usuario', [AuthController::class, 'showRegister'])->name('register.show');
+Route::post('/Login-usuario', [AuthController::class, 'register'])->name('register.store');
